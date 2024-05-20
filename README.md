@@ -1,1 +1,1 @@
-This repository is for posting my learnings from `Flutter & Dart - The Complete Guide [2024 Edition]` Course. I am keeping it public because I have to access some things offline or from unauthorized devices.
+This repository is for posting my learnings from `Flutter & Dart - The Complete Guide [2024 Edition]` Course.
