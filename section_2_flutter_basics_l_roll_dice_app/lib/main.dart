@@ -14,7 +14,10 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.deepPurpleAccent,
-        body: GradientContainer(),
+        body: GradientContainer(
+          Color.fromARGB(255, 33, 5, 109),
+          Color.fromARGB(255, 21, 149, 111),
+        ),
       ),
     );
   }
