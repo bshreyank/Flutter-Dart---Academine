@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-
-import 'my_app.dart';
+import 'package:section_3_flutter_deep_dive_quiz_app/start_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: StartScreen(),
+      ),
+    ),
+  );
 }
