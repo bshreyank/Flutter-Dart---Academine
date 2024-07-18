@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:section_3_flutter_deep_dive_quiz_app/questions_screen.dart';
-import 'package:section_3_flutter_deep_dive_quiz_app/start_screen.dart';
+import 'package:section_3_flutter_deep_dive_quiz_app/ui/questions_screen.dart';
+import 'package:section_3_flutter_deep_dive_quiz_app/ui/start_screen.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
