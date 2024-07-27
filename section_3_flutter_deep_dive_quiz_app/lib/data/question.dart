@@ -1,6 +1,7 @@
 import 'package:section_3_flutter_deep_dive_quiz_app/models/model.dart';
 
 const questions = [
+  // this is class constructor function
   QuizQuestion(
     'What are the main building blocks of Flutter UIs?',
     [
