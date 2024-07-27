@@ -3,7 +3,13 @@ import 'package:section_3_flutter_deep_dive_quiz_app/data/question.dart';
 import 'package:section_3_flutter_deep_dive_quiz_app/ui/answer_button.dart';
 
 class QuestionsScreen extends StatefulWidget {
-  const QuestionsScreen({super.key});
+  const QuestionsScreen({
+    super.key,
+    required this.onSelectAnswer,
+  });
+
+  final void Function(String answer) onSelectAnswer;
+
   @override
   State<StatefulWidget> createState() => _QuestionsScreenState();
 }
@@ -11,7 +17,9 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   var currentQuestionsIndex = 0;
 
-  void answerQuestion() {
+  void answerQuestion(String selectedAnswer) {
+    widget.onSelectAnswer(selectedAnswer);
+
     // currentQuestionsIndex = currentQuestionsIndex + 1;
     // currentQuestionsIndex += 1;
 
@@ -45,7 +53,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             ...currentQuestion.getShuffledAnswers().map((answer) {
               return AnswerButton(
                 answerText: answer,
-                onTap: answerQuestion,
+                onTap: () {
+                  answerQuestion(answer);
+                },
               );
             }),
           ],
