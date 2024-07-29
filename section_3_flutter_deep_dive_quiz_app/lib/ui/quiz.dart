@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:section_3_flutter_deep_dive_quiz_app/data/question.dart';
 import 'package:section_3_flutter_deep_dive_quiz_app/ui/questions_screen.dart';
 import 'package:section_3_flutter_deep_dive_quiz_app/ui/start_screen.dart';
+import 'package:section_3_flutter_deep_dive_quiz_app/ui/result_screen.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -28,7 +29,7 @@ class _QuizState extends State<Quiz> {
     if (selectedAnswers.length == questions.length) {
       setState(() {
         selectedAnswers = [];
-        activeScreen = 'start-screen';
+        activeScreen = 'result-screen';
       });
     }
   }
@@ -40,6 +41,12 @@ class _QuizState extends State<Quiz> {
     if (activeScreen == 'questions-screen') {
       screenWidget = QuestionsScreen(
         onSelectAnswer: chooseAnswer,
+      );
+    }
+
+    if (activeScreen == 'result-screen') {
+      screenWidget = ResultScreen(
+        choosenAnswer: selectedAnswers,
       );
     }
 
